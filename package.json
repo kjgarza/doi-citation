@@ -1,8 +1,16 @@
 {
   "name": "doi-citation",
   "version": "0.1.0",
-  "private": true,
-  "scripts": {
+  "private": false,
+  "author": "Kristian Garza <kj.garza@gmail.com> (https://github.com/kjgarza)",
+  "homepage": "https://github.com/kjgarza/doi-citation",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kjgarza/doi-citation.git"
+  },
+  "main": "dist/doi-citation.min.js",
+  "license": "MIT",
+    "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
