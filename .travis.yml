@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- node
+cache: npm
+install:
+- npm install -g @vue/cli
+- npm install -g @vue/cli-service-global
+before_deploy: vue build --target wc 'src/components/DoiCitation.vue'
+deploy:
+  provider: npm
+  email: kj.garza@gmail.com
+  api_key:
+    secure: kyicG2M57Iw/AzRA9Xz3fIKfyc1JJpXZcoY318tDxgQpDLNW6jpFbY5FWR546fPm1EEvMBQu5FSh3nNy8Q6ivERtgPW1E9mqXqxbyY/VHULe212XMwFHNVARKVfHnH41C8IwOhbig96v1gqGf36xEyYIYccjrSwmcl/hQvXG4ajSdI1eMQguz3M3cKy3ZpXhcHVHlSzVDaUosTDtAAcD9Zcd6jshvVP+zDixdcXHYqUOTBChXe7oxZhrEtwFO3BlH/oILL5w5RPGSeYmV3upXy3ycsS1LgeiCeg5sWkreUaM0dC+o0o/IFlYRiz2ZxJhYKswGP2Hp1YC+GqFNAcj0Xuvoo4n0sZBsR6OZgSDxuDbNiemuNw0DolcewRfirwOFRCV+M4sV1PidlD9EKC7Jo9YVYmeRsP1Y7xCbGyt0skPCsaxkQopFm6JKL/U+VSXM6wNCpnryoYxacYMMf8GVWVsF87PSm0g2ZnaoLB1+jAm1GFNuvpdDHDoEOzqB2b2JB0tu0vvesMAbG2mDvBT6qblq0xLW3DqotMaX+9Gm28uodk/hYevMSi+9agARs1j7qYqnpaGCZaXzn7665YsDBc732hePlzOtTj8GQDRctErPf3Ihv0tgY++nYmguZ+DdUNtpmuYRNJX+xo1ko5HNBfQHjblBofDXKi7lTtKcJQ=
+  on:
+    repo: kjgarza/doi-citation
+    branch: master
